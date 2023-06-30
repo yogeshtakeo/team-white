@@ -3,6 +3,7 @@ import {Formik, Form, Field} from 'formik'
 import * as Yup from 'yup'
 import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
+import {useState} from 'react'
 
 const RegisterPage = () => {
     const initialValues={
@@ -14,6 +15,7 @@ const RegisterPage = () => {
         confirmpassword:'',
         checkbox:false,
     }
+    const [username, setusername]=useState('')
     //validates the form input fields.
     const validationSchema=Yup.object({
         firstname:Yup.string().required('*Enter First Name'),
@@ -21,16 +23,21 @@ const RegisterPage = () => {
         dob:Yup.string().required('*Enter dob'),
         username:Yup.string().required('*Enter Username'),
         password:Yup.string().required('*Enter Password'),
-        confirmpassword:Yup.string().required('*Please Confirm Password'),
+        confirmpassword:Yup.string().required('*Please Confirm Password') .oneOf([Yup.ref('password')],'*Passwords must match'),
+                      
         checkbox:Yup.boolean().oneOf([true], 'You need to accept the terms and conditions')
     })
     
     function submithandler(values: typeof initialValues){
         toast.success('Successfully created your account')
     }
+    const handleChange=()=>{
+
+    }
+
   return (
     <div>
-    <Formik 
+    <Formik
     initialValues={initialValues}
     onSubmit={submithandler}
     validationSchema={validationSchema}>
@@ -50,8 +57,9 @@ const RegisterPage = () => {
            />
            <InputField  type='text'
             name='username' label='Username'
+          
            />
-           <InputField  type='text'
+           <InputField  type='password'
             name='password' label='Password'
            />
            <InputField  type='text'
@@ -60,9 +68,7 @@ const RegisterPage = () => {
             <InputField  type='checkbox'
             name='checkbox' label='check'
            />
-            
-           
-           <button className='border-2 w-32 mx-auto mt-9' type="submit">Submit</button> 
+               <button className='border-2 w-32 mx-auto mt-9' type="submit">Submit</button> 
 <Toaster/>
     </Form>
     

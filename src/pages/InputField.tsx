@@ -5,9 +5,10 @@ interface IInputField{
     name:string
     type?:string
     className?:string
+    
 
 }
-const InputField:React.FC<IInputField> = ({label,name,type,className}) => {
+const InputField:React.FC<IInputField> = ({label,name,type,className, }) => {
 
   return (
     <div className={className}>
