@@ -1,7 +1,8 @@
 import React from 'react'
-import {Formik, Form, Field,ErrorMessage} from 'formik'
+import {Formik, Form, Field} from 'formik'
 import * as Yup from 'yup'
 import { toast, Toaster } from 'react-hot-toast'
+import InputField from './InputField'
 
 const RegisterPage = () => {
     const initialValues={
@@ -11,7 +12,7 @@ const RegisterPage = () => {
         username:'',
         password:'',
         confirmpassword:'',
-        checked:false,
+        checkbox:false,
     }
     //validates the form input fields.
     const validationSchema=Yup.object({
@@ -21,7 +22,7 @@ const RegisterPage = () => {
         username:Yup.string().required('*Enter Username'),
         password:Yup.string().required('*Enter Password'),
         confirmpassword:Yup.string().required('*Please Confirm Password'),
-        checked:Yup.string().required('*Please check the checkbox')
+        checkbox:Yup.boolean().oneOf([true], 'You need to accept the terms and conditions')
     })
     
     function submithandler(values: typeof initialValues){
@@ -37,43 +38,31 @@ const RegisterPage = () => {
             return(
                 
                 
-    <Form className='flex flex-col'>
-        <label>First Name</label>
-        <Field className='border-2 w-32 mx-auto' type='text'
-            name='firstname'
+    <Form className='flex flex-col border-2 h-auto'>
+        <InputField  type='text'
+            name='firstname' label='First Name'
            />
-           <ErrorMessage className='text-red-600 mb-4' name="firstname" component='p'/>
-           <label>Last Name</label>
-        <Field className='border-2 w-32 mx-auto' type='text'
-            name='lastname'
+           <InputField  type='text'
+            name='lastname' label='Last Name'
            />
-           <ErrorMessage className='text-red-600 mb-4' name="lastname" component='div'/>
-           <label>Date Of Birth</label>
-        <Field className='border-2 w-32 mx-auto' type='text'
-            name='dob'
+           <InputField  type='text'
+            name='dob' label='Date Of birth'
            />
-           <ErrorMessage  className='text-red-600 mb-4' name="dob" component='div'/>
-           <label>Username</label>
-        <Field className='border-2 w-32 mx-auto' type='text'
-            name='username'
+           <InputField  type='text'
+            name='username' label='Username'
            />
-           <ErrorMessage className='text-red-600 mb-4' name="username" component='div'/>
-           <label>Password</label>
-        <Field className='border-2 w-32 mx-auto' type='password'
-            name='password'
+           <InputField  type='text'
+            name='password' label='Password'
            />
-           <ErrorMessage className='text-red-600 mb-4' name="password" component='div'/>
-           <label>Confirm Password</label>
-        <Field className='border-2 w-32 mx-auto' type='password'
-            name='confirmpassword'
+           <InputField  type='text'
+            name='confirmpassword' label='Confirm Password'
            />
-           <ErrorMessage name="confirmpassword" className='text-red-600 mb-4' component='div'/>
-           <Field className='border-2 w-32 mx-auto' type='checkbox'
-            name='checked'
+            <InputField  type='checkbox'
+            name='checkbox' label='check'
            />
-           <ErrorMessage name="checked" className='text-red-600 mb-4' component='div'/>
-
-           <button className='border-2 w-32 mx-auto' type="submit">Submit</button> 
+            
+           
+           <button className='border-2 w-32 mx-auto mt-9' type="submit">Submit</button> 
 <Toaster/>
     </Form>
     
