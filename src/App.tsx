@@ -13,14 +13,11 @@ function App() {
 
   return (
     <>
-      <RegisterPage />
-      <h1>This Is Home Page:</h1>
-      <HomePage />
+      {/* <RegisterPage /> */}
+      {/* <HomePage /> */}
       <LoginPage />
-      <Navbar />
-      <div></div>
-      <Footer />
-      <RegisterPage />
+      {/* <Navbar /> */}
+      {/* <Footer /> */}
     </>
   );
 }

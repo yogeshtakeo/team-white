@@ -1,8 +1,14 @@
 import React from 'react'
 
-function button() {
+interface IProps{
+  children?: string
+}
+
+function button(props: IProps) {
   return (
-    <div>button</div>
+    <div>
+      <button>{props.children}</button>
+    </div>
   )
 }
 

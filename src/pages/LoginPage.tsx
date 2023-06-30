@@ -3,6 +3,10 @@ import { Form, Formik,Field } from "formik";
 import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
 import * as Yup from 'yup'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Button from '../components/Button';
+import Slider from '../components/LoginPageComponent/Slider';
 
 function LoginPage(){
 
@@ -22,23 +26,54 @@ function LoginPage(){
    
     return(
         <>
-        <Formik
-            initialValues={initialValues}
-            onSubmit={submitHandler}
-            validationSchema={validationSchema}>
-                {()=>{return(
+        <div>
+            <Navbar/>
+        </div>
+        
+        
+      <div className='navbar mt-10 ml-10 mr-10 h-10 text-justify'>
+        <nav  className='flex flex-row justify-around list-none font-semibold'>
+                <li>
+                    Checking
+                </li>
+                <li>
+                    Savings
+                </li>
+                <li>
+                    Credit Cards
+                </li>
+                <li>
+                    Investing
+                </li>
+            </nav>
+        </div>
+        <div className='login flex items-center justify-center mt-0 m-10'>
+      
+            <div className='' >
+                
+                <Formik
+                    initialValues={initialValues}
+                    onSubmit={submitHandler}
+                    validationSchema={validationSchema}>
+                        {()=>{return(
+                <div>
+                    <Form className='grid grid-rows-3'>
+                        <InputField type='text' name='Username' label='Username'/>
+                        <InputField type='password' name='Password' label='Password'/>
+                        <Button>LOGIN</Button>
+                    </Form>
+                </div>
 
-        <Form>
-        <InputField type='text' name='Username' label='Username'/>
+                )}}
+                </Formik>
+            </div>
+                <Slider/>
+            </div>
+        
 
-        <InputField type='password' name='Password' label='Password'/>
-
-        <button>LOGIN</button>
-
-        </Form>
-
-        )}}
-        </Formik>
+        <div>
+            <Footer/>
+        </div>
         </>
     )
     
