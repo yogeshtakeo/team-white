@@ -13,7 +13,7 @@ function LoginPage(){
 
     const validationSchema=Yup.object({
         Username:Yup.string().required('Enter Username'),
-        password:Yup.string().required('Please enter Password')
+        Password:Yup.string().required('Please enter Password')
     })
 
     function submitHandler(values: typeof initialValues){

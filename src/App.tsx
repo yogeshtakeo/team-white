@@ -4,6 +4,7 @@ import "./App.css";
 import RegisterPage from "./pages/RegisterPage";
 import "./App.css";
 import Homepage from "./components/Homepage.comp";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
       <RegisterPage/>
       <h1> Welcome </h1>
       <Homepage />
+      <LoginPage/>
     </>
   );
 }
