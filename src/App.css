@@ -1,3 +1,20 @@
 .navbar {
-  background-color: #AEA8FD;
+  background-color: #aea8fd;
+}
+
+.cardBG {
+  background-color: #dbdef9;
+}
+
+.top2 {
+  background-color: white;
+}
+
+.bottomButtons {
+  background-color: #b3bdf2;
+}
+
+.line {
+  border: solid black 0.5px;
+  margin: 5px;
 }
