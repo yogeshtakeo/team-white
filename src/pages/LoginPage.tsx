@@ -5,7 +5,6 @@ import InputField from './InputField'
 import * as Yup from 'yup'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Button from '../components/Button';
 import Slider from '../components/LoginPageComponent/Slider';
 
 function LoginPage(){
@@ -30,7 +29,7 @@ function LoginPage(){
             <Navbar/>
         </div>
         
-        
+      
       <div className='navbar mt-10 ml-10 mr-10 h-10 text-justify'>
         <nav  className='flex flex-row justify-around list-none font-semibold'>
                 <li>
@@ -47,9 +46,9 @@ function LoginPage(){
                 </li>
             </nav>
         </div>
-        <div className='login flex items-center justify-center mt-0 m-10'>
+        <div className='flex items-center justify-center object-fill'>
       
-            <div className='' >
+            <div className='border-solid border-black border-2 p-10 login' >
                 
                 <Formik
                     initialValues={initialValues}
@@ -57,18 +56,27 @@ function LoginPage(){
                     validationSchema={validationSchema}>
                         {()=>{return(
                 <div>
-                    <Form className='grid grid-rows-3'>
+                    <Form className='grid grid-rows-3 text-white'>
+                      
                         <InputField type='text' name='Username' label='Username'/>
                         <InputField type='password' name='Password' label='Password'/>
-                        <Button>LOGIN</Button>
+                      
+                        <button className='border-solid border-white border-2 mt-2'>LOGIN</button>
+                        <div className=''>
+                            <p className='mt-2 mb-2'>Forgot ID/Password?</p>
+                            <p  className='mt-2 mb-2'>Security & Help</p>
+                        </div>
                     </Form>
                 </div>
 
                 )}}
                 </Formik>
             </div>
+          
                 <Slider/>
+        
             </div>
+            
         
 
         <div>

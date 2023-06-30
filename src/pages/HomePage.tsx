@@ -13,7 +13,7 @@ function HomePage() {
           <h1>ACCOUNTS</h1>
           <h1>DASHBOARD</h1>
         </div>
-        <div className="flex flex-row gap-4 justify-cener mb-3">
+        <div className="flex flex-row gap-4 justify-center mb-3">
           <LeftCard />
           <RightCard />
         </div>

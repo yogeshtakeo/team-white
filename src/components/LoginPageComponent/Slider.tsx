@@ -24,9 +24,10 @@ function Slider (){
     
     return(
         <>
-            <div className="relative w-600 mx-40 my-10 pt-6">
+        <div className="static right-0">
+                <div className="relative w-600 mx-40 my-10 pt-6">
                 <div className="slide relative">
-                    <img className="w-[700px] h-[500px] object-cover rounded-xl"
+                    <img className="w-[700px] h-[480px] object-cover"
                         src={img[currentImageIndex]}/>
 
                 <div className="flex justify-center items-center space-x-5 mt-2">
@@ -50,6 +51,8 @@ function Slider (){
 
                 
             </div>
+            </div>
+
         </>
     )
 }
