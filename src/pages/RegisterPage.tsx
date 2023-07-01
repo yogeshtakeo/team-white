@@ -1,9 +1,10 @@
-import React from 'react'
-import {Formik, Form, Field} from 'formik'
+
+import {Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
 import {useState} from 'react'
+import {AiOutlineGoogle} from 'react-icons/ai'
 
 const RegisterPage = () => {
     const initialValues={
@@ -25,15 +26,13 @@ const RegisterPage = () => {
         password:Yup.string().required('*Enter Password'),
         confirmpassword:Yup.string().required('*Please Confirm Password') .oneOf([Yup.ref('password')],'*Passwords must match'),
                       
-        checkbox:Yup.boolean().oneOf([true], 'You need to accept the terms and conditions')
+        checkbox:Yup.boolean().oneOf([true], '*You need to accept the terms and conditions')
     })
     
     function submithandler(values: typeof initialValues){
         toast.success('Successfully created your account')
     }
-    const handleChange=()=>{
-
-    }
+ 
 
   return (
     <div>
@@ -44,14 +43,20 @@ const RegisterPage = () => {
         {()=>{
             return(
                 
-                
-    <Form className='flex flex-col border-2 h-auto'>
+        <div className='background h-auto p-20 '>
+            
+            <h1 className='text-white ml-4 mt-2 mb-4 text-2xl'>PayCircle</h1> 
+            <div className='flex '>     
+    <Form className=' form flex flex-col h-auto rounded-lg w-[40%] p-5 justify-center text-white '>
+        <h1 className='text-center text-xl mb-2'>Create your Account</h1>
+        <div className='grid grid-cols-2 gap-10 '>
         <InputField  type='text'
             name='firstname' label='First Name'
            />
            <InputField  type='text'
             name='lastname' label='Last Name'
            />
+           </div>
            <InputField  type='text'
             name='dob' label='Date Of birth'
            />
@@ -65,12 +70,28 @@ const RegisterPage = () => {
            <InputField  type='text'
             name='confirmpassword' label='Confirm Password'
            />
-            <InputField  type='checkbox'
-            name='checkbox' label='check'
+           <div className='flex w-full '>
+            <Field  type='checkbox' 
+            name='checkbox' id='checkbox'
            />
-               <button className='border-2 w-32 mx-auto mt-9' type="submit">Submit</button> 
+           <label className='ml-1' htmlFor='checkbox'>
+                    I agree to all Terms, Privacy policy, and Fees.
+                  </label>
+                 
+                  </div>
+                  <ErrorMessage name='checkbox' component='div' className='text-red-600'/>
+               <button className='btn  w-full mx-auto mt-4 rounded-md bg-purple-500 h-9' type="submit">Sign Up</button> 
+               <p >Already have an account? Log In </p>
+               <p className='text-center mt-2'>OR</p>
+               <button className='btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
 <Toaster/>
     </Form>
+    <div className='rbox absolute bottom-[10%] right-20  h-32  rounded-md text-white p-4 flex flex-col justify-center'>
+        <h1 className='text-2xl'>Say goodbye to financial stress with the help of PayCircle.</h1>
+        <p>Take control of your finances with PayCircle the quickest and simplest way</p>
+    </div>
+    </div>
+    </div>  
     
             )
     }}
