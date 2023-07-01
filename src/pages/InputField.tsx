@@ -19,7 +19,7 @@ const InputField:React.FC<IInputField> = ({label,name,type,className, }) => {
         type={type}
         name={name}
         
-        className='flex flex-col border-2 mx-auto'/>
+        className='flex border-2 border-transparent rounded-md w-full mb-1 h-9'/>
         <ErrorMessage name={name} className='text-red-600 mb-2' component='div'/> 
     </div>
   )
