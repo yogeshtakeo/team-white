@@ -68,7 +68,7 @@ const RegisterPage = () => {
            <InputField  type='password'
             name='password' label='Password'
            />
-           <InputField  type='text'
+           <InputField  type='password'
             name='confirmpassword' label='Confirm Password'
            />
            <div className='flex w-full '>
@@ -87,7 +87,7 @@ const RegisterPage = () => {
                <p >Already have an account? Log In </p>
                <p className='text-center mt-2'>OR</p>
                <button className='btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
-<Toaster/>
+    <Toaster/>
     </Form>
     <div className='rbox absolute bottom-[10%] right-20  h-32  rounded-md text-white p-4 flex flex-col justify-center'>
         <h1 className='text-2xl'>Say goodbye to financial stress with the help of PayCircle.</h1>
