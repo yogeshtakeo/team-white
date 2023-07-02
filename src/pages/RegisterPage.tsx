@@ -17,7 +17,7 @@ const RegisterPage = () => {
         confirmpassword:'',
         checkbox:false,
     }
-    const [username, setusername]=useState('')
+    
     //validates the form input fields.
     const validationSchema=Yup.object({
         firstname:Yup.string().required('*Enter First Name'),
