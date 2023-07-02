@@ -10,10 +10,6 @@ function Slider (){
        
     const [currentImageIndex, setCurrentImageIndex]=useState(0)
 
-    function changeSlide(index:number){
-        setCurrentImageIndex(index)
-    }
-
     function previousSlide(){
       setCurrentImageIndex((prevIndex) => prevIndex === 0? img.length -1 : prevIndex -1)
     }
@@ -24,23 +20,11 @@ function Slider (){
     
     return(
         <>
-        <div className="static right-0">
-                <div className="relative w-600 mx-40 my-10 pt-6">
+        <div className="static right-0 rounded-xl">
+                <div className="relative w-600">
                 <div className="slide relative">
-                    <img className="w-[700px] h-[480px] object-cover"
+                    <img className="w-[1000px] h-[480px] object-cover rounded-br-md"
                         src={img[currentImageIndex]}/>
-
-                <div className="flex justify-center items-center space-x-5 mt-2">
-                        {img.map((_, index) => (
-                            <div
-                                key={index}
-                                className={`dot border-solid border-2 border-slate-200 w-4 h-4 rounded-full cursor-pointer bg-slate-200 hover:bg-slate-400 ${
-                                    index === currentImageIndex ? "active" : ""
-                                }`}
-                                onClick={() => changeSlide(index)}>
-                            </div>
-                        ))}
-                </div>
             </div>
 
                 <button className="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
