@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Slider from '../components/LoginPageComponent/Slider';
 import SubNavbar from '../components/LoginPageComponent/SubNavbar';
+import { Link } from 'react-router-dom'
 
 function LoginPage(){
 
@@ -44,8 +45,8 @@ function LoginPage(){
                         
                             <InputField type='text' name='Username' label='Username' className='w-[26vw]'/>
                             <InputField type='password' name='Password' label='Password'/>
-                        
-                            <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-gray-200 hover:text-gray-500 rounded' type='submit'>LOGIN</button>
+                            
+                                <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-gray-200 hover:text-gray-500 rounded' type='submit'><Link to = '/home'>LOGIN</Link></button>
                             <div className=''>
                                 <p className='mt-2 mb-2'>Forgot ID/Password?</p>
                                 <p  className='mt-2 mb-2'>Security & Help</p>

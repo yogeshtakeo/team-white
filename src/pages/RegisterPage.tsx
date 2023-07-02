@@ -5,6 +5,7 @@ import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
 import {useState} from 'react'
 import {AiOutlineGoogle} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const RegisterPage = () => {
     const initialValues={
@@ -80,7 +81,9 @@ const RegisterPage = () => {
                  
                   </div>
                   <ErrorMessage name='checkbox' component='div' className='text-red-600'/>
-               <button className='btn  w-full mx-auto mt-4 rounded-md bg-purple-500 h-9' type="submit">Sign Up</button> 
+                  <Link to = "/login"> 
+                  <button className='btn  w-full mx-auto mt-4 rounded-md bg-purple-500 h-9' type="submit">Sign Up</button> 
+                  </Link>
                <p >Already have an account? Log In </p>
                <p className='text-center mt-2'>OR</p>
                <button className='btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
