@@ -29,10 +29,10 @@ function LoginPage(){
         
         <Navbar/>
 
-        <div className='shadow-gray-400 mt-10 ml-10 mr-10'>
+        <div className='shadow-gray-400 mt-10 ml-10 mr-10 shadow-xl shadow-gray-600'>
             <SubNavbar/>
             <div className='flex'>
-                <div className='login border-solid border-black p-10 rounded-bl-md' >
+                <div className='login border-solid border-black p-10 h-[460px] rounded-bl-md ' >
                     <Formik
                         initialValues={initialValues}
                         onSubmit={submitHandler}

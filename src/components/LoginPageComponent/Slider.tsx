@@ -21,9 +21,9 @@ function Slider (){
     return(
         <>
         <div className="static right-0 rounded-xl">
-                <div className="relative w-600">
+                <div className="relative">
                 <div className="slide relative">
-                    <img className="w-[1000px] h-[480px] object-cover rounded-br-md"
+                    <img className="w-[1000px] h-[460px] object-cover rounded-br-md"
                         src={img[currentImageIndex]}/>
             </div>
 
