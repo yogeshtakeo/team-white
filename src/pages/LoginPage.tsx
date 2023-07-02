@@ -63,7 +63,7 @@ function LoginPage(){
                     <Toaster/>
                 </div>
                 <Slider/>
-                <div className='fixed bottom-[370px] right-[550px]  h-50 w-80 rounded-md text-white pt-4 pl-6 pr-6 flex flex-col justify-center'>
+                <div className='absolute bottom-[370px] right-[550px]  h-50 w-80 rounded-md text-white pt-4 pl-6 pr-6 flex flex-col justify-center'>
                     <h1 className='text-3xl'>Auto purchase loans</h1>
                     <p>Low rates on purchase and</p><p> lease buyout loans</p>
                     <button className='bg-black rounded p-1 mt-6 mb-6 '>Learn More</button>
