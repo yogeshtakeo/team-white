@@ -24,6 +24,22 @@
   height: 480px;
 }
 
-.image{
-  background-image:"/Images/Bankcard1.jpg" ;
+.background{
+  background-image: url('./assets/bankbackground.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter:contrast(130%)
+  
+}
+.form{
+background-color: #393E6E;
+}
+.rbox{
+  background-color: #393e6e7a;
+ 
+
+}
+.btn{
+  background-color: #764BF0;
 }
