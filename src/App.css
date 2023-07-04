@@ -24,23 +24,19 @@
   height: 480px;
 }
 
-.background{
-  background-image: url('./assets/bankbackground.avif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 5%;
-  
-  filter:contrast(150%)
-  
+body{
+
+  background: linear-gradient(to right, rgb(183, 119, 1),rgba(255, 166, 0, 0.354));
 }
 .form{
-background-color: #393E6E;
-}
-.rbox{
-  background-color: #393e6e7a;
- 
+
+backdrop-filter:blur(15px);
 
 }
+
+ 
+
+
 .btn{
   background-color: #764BF0;
 }
