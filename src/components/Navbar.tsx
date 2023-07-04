@@ -2,10 +2,12 @@ import React from 'react'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {RiGlobalFill} from 'react-icons/ri'
 import BLogo from '../components/BLogo'
+import { useNavigate } from 'react-router-dom'
 
 
 
 function Navbar() {
+  const navigate=useNavigate()
   return (
     <div className="navbar flex justify-between align-center h-12 w-full p-3">
      <div className='Brandlogo flex justify-center items-center'>
@@ -31,7 +33,9 @@ function Navbar() {
       <a href='#'>Help</a>
       </li>
       <li>
-      <a href='#'><AiOutlineSearch size={25}/></a>
+      <a href='#' onClick={()=>{navigate('/Search')}} ><AiOutlineSearch size={25}/>
+      
+      </a>
       </li>
       <div className='flex justify-center items-center'>
         <li>
