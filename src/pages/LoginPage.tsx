@@ -7,7 +7,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Slider from '../components/LoginPageComponent/Slider';
 import SubNavbar from '../components/LoginPageComponent/SubNavbar';
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 function LoginPage(){
 
@@ -20,9 +21,11 @@ function LoginPage(){
         Username:Yup.string().required('*Enter Username'),
         Password:Yup.string().required('*Please enter Password')
     })
-
+    const navigate=useNavigate()
     function submitHandler(values: typeof initialValues){
             toast.success('Successfully logged in')
+            navigate('/HomePage')
+
     }
    
     return(
@@ -46,7 +49,8 @@ function LoginPage(){
                             <InputField type='text' name='Username' label='Username' className='w-[26vw]'/>
                             <InputField type='password' name='Password' label='Password'/>
                             
-                                <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-purple-600 hover:border-transparent hover:text-black rounded' type='submit'><Link to = '/home'>LOGIN</Link></button>
+                                <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-purple-600 hover:border-transparent hover:text-black rounded'
+                                 type='submit'>LOGIN</button>
                             <div className=''>
                                 <p className='mt-2 mb-2'>Forgot ID/Password?</p>
                                 <p  className='mt-2 mb-2'>Security & Help</p>
