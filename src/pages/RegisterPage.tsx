@@ -5,7 +5,7 @@ import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
 import {useState} from 'react'
 import {AiOutlineGoogle} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 const RegisterPage = () => {
     const initialValues={
@@ -29,9 +29,10 @@ const RegisterPage = () => {
                       
         checkbox:Yup.boolean().oneOf([true], '*You need to accept the terms and conditions')
     })
-    
+    const navigate=useNavigate()
     function submithandler(values: typeof initialValues){
         toast.success('Successfully created your account')
+        navigate("/LoginPage")
     }
  
 
@@ -81,9 +82,9 @@ const RegisterPage = () => {
                  
                   </div>
                   <ErrorMessage name='checkbox' component='div' className='text-red-600'/>
-                  <Link to = "/login"> 
+                 
                   <button className='btn  w-full mx-auto mt-4 rounded-md bg-purple-500 h-9' type="submit">Sign Up</button> 
-                  </Link>
+                  
                <p >Already have an account? Log In </p>
                <p className='text-center mt-2'>OR</p>
                <button className='btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
