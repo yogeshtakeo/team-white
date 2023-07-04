@@ -10,9 +10,9 @@ function Navbar() {
   const navigate=useNavigate()
   return (
     <div className="navbar flex justify-between align-center h-12 w-full p-3">
-     <div className='Brandlogo flex justify-center items-center'>
-    <ul className=' navbar flex flex-row justify-around align-center w-full pl-4 font-semibold'>
-    <li className='text-2xl'>
+     <div className=' bg-slate-300 Brandlogo flex justify-center items-center'>
+    <ul className='navbar flex flex-row justify-around align-center w-full pl-4 font-semibold'>
+    <li className=' text-2xl'>
         PayCircle
       </li>
       </ul>
