@@ -13,12 +13,12 @@ function LoginPage(){
 
     const initialValues={
         Username: '',
-        password:'',
+        Password:'',
     }
 
     const validationSchema=Yup.object({
-        Username:Yup.string().required('Enter Username'),
-        Password:Yup.string().required('Please enter Password')
+        Username:Yup.string().required('*Enter Username'),
+        Password:Yup.string().required('*Please enter Password')
     })
 
     function submitHandler(values: typeof initialValues){
@@ -30,10 +30,10 @@ function LoginPage(){
         
         <Navbar/>
 
-        <div className='shadow-gray-400 mt-10 ml-10 mr-10 shadow-xl shadow-gray-600'>
+        <div className=' shadow-gray-600 mt-10 ml-10 mr-10 shadow-xl rounded-md'>
             <SubNavbar/>
-            <div className='flex'>
-                <div className='login border-solid border-black p-10 h-[460px] rounded-bl-md ' >
+            <div className='flex rounded-md'>
+                <div className='relative login border-solid border-black p-10 h-[460px] rounded-bl-md ' >
                     <Formik
                         initialValues={initialValues}
                         onSubmit={submitHandler}
@@ -46,7 +46,7 @@ function LoginPage(){
                             <InputField type='text' name='Username' label='Username' className='w-[26vw]'/>
                             <InputField type='password' name='Password' label='Password'/>
                             
-                                <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-gray-200 hover:text-gray-500 rounded' type='submit'><Link to = '/home'>LOGIN</Link></button>
+                                <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-purple-600 hover:border-transparent hover:text-black rounded' type='submit'><Link to = '/home'>LOGIN</Link></button>
                             <div className=''>
                                 <p className='mt-2 mb-2'>Forgot ID/Password?</p>
                                 <p  className='mt-2 mb-2'>Security & Help</p>
@@ -63,7 +63,7 @@ function LoginPage(){
                     <Toaster/>
                 </div>
                 <Slider/>
-                <div className='absolute bottom-[370px] right-[550px]  h-50 w-80 rounded-md text-white pt-4 pl-6 pr-6 flex flex-col justify-center'>
+                <div className='absolute right-[32%] top-[25%] h-50 w-80 text-white pt-4 pl-6 pr-6 flex flex-col justify-center'>
                     <h1 className='text-3xl'>Auto purchase loans</h1>
                     <p>Low rates on purchase and</p><p> lease buyout loans</p>
                     <button className='bg-black rounded p-1 mt-6 mb-6 '>Learn More</button>

@@ -28,8 +28,9 @@
   background-image: url('./assets/bankbackground.avif');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  filter:contrast(130%)
+  background-position: 5%;
+  
+  filter:contrast(150%)
   
 }
 .form{

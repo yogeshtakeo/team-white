@@ -1,14 +1,24 @@
 import React from 'react'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {RiGlobalFill} from 'react-icons/ri'
+import BLogo from '../components/BLogo'
 
 
 
 function Navbar() {
   return (
     <div className="navbar flex justify-between align-center h-12 w-full p-3">
-      <h1 className='navbar text-2xl font-semibold pr-6'>PayCircle</h1>
-    <ul className=' navbar flex flex-row justify-around align-center w-full pl-4 font-semibold'>
+     <div className='Brandlogo'>
+    <ul className=' navbar flex flex-row justify-around align-center w-full pl-4 font-semibold bg-slate-200'>
+    
+      <li>
+        PayCircle
+      </li>
+      
+      </ul>
+     <BLogo/>
+      </div>
+      <ul className=' navbar flex flex-row justify-around align-center  pl-4 font-semibold bg-slate-200'>
       <li>
       <a href='#'>Small Business</a>
       </li>

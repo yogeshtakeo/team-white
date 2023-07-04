@@ -3,7 +3,7 @@ import {Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
-import {useState} from 'react'
+//import {useState} from 'react'
 import {AiOutlineGoogle} from 'react-icons/ai'
 import {  useNavigate } from 'react-router-dom'
 
@@ -45,7 +45,7 @@ const RegisterPage = () => {
         {()=>{
             return(
                 
-        <div className='background h-auto p-20 '>
+        <div className='background h-auto p-12 '>
             
             <h1 className='text-white ml-4 mt-2 mb-4 text-2xl'>PayCircle</h1> 
             <div className='flex '>     
@@ -90,7 +90,7 @@ const RegisterPage = () => {
                <button className='btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
     <Toaster/>
     </Form>
-    <div className='rbox absolute bottom-[10%] right-20  h-32  rounded-md text-white p-4 flex flex-col justify-center'>
+    <div className='rbox absolute bottom-[7%] right-[5%]  h-32  rounded-md text-white p-4 flex flex-col justify-center shadow-gray-600 shadow-md'>
         <h1 className='text-2xl'>Say goodbye to financial stress with the help of PayCircle.</h1>
         <p>Take control of your finances with PayCircle the quickest and simplest way</p>
     </div>
