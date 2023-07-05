@@ -4,6 +4,7 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import { Routes, Route } from "react-router-dom";
 import CreditCards from "./pages/CreditCards";
+import CustomerService from "./pages/CustomerService";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="login" element={<LoginPage />}></Route>
         <Route path="home" element={<HomePage />}></Route>
         <Route path="CreditCards" element={<CreditCards />}></Route>
+        <Route path="CustomerService" element={<CustomerService />}></Route>
       </Routes>
 
       {/* <RegisterPage /> */}

@@ -2,7 +2,7 @@ import { Card } from "../components/BlogPageComponents/Card";
 
 function CreditCards() {
   return (
-    <Card className="p-2 m-4 bg-red-400">
+    <Card className="p-2 m-4 bg-red-800">
       <section className="bg-orange-200 dark:bg-orange-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
