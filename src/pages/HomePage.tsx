@@ -9,7 +9,7 @@ function HomePage() {
     <div>
       <Navbar />
       <div className="innerBox flex flex-col mt-3 pt-10 pl-10 pr-10">
-        <div className="flex flex-row justify-center gap-5 mb-4 text-2xl underline font-serif">
+        <div className="flex flex-row justify-center gap-5 mb-4 text-2xl underline font-serif text-orange-950">
           <h1>ACCOUNTS</h1>
           <h1>DASHBOARD</h1>
         </div>
