@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img1 from "../../assets/cover_image_1679401666.jpeg.760x400_q85_crop_upscale.jpg";
+import img1 from "../../assets/heap-wealth-success-finance-banking-generated-by-ai_24640-96050.avif";
 import img2 from "../../assets/istockphoto-1049658918-612x612.jpg";
 import img3 from "../../assets/photo-1515974256630-babc85765b1d.avif";
 
@@ -63,7 +63,7 @@ function Slider() {
           {slides[currentImageIndex].text.map(
             (items: string, index: number) => (
               <li
-                className="list-none text-slate-950 font-semibold text-2xl"
+                className="list-none text-white font-semibold text-2xl"
                 key={index}
               >
                 {items}
