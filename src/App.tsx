@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import { Routes, Route } from "react-router-dom";
-import CreditCards from "./components/BlogPageComponents/CreditCards";
+import CreditCards from "./pages/CreditCards";
 
 function App() {
   return (
