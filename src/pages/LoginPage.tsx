@@ -33,7 +33,7 @@ function LoginPage(){
         
         <Navbar/>
 
-        <div className=' shadow-yellow-800 mt-10 ml-10 mr-10 shadow-md rounded-md bg-neutral-100 bg-opacity-60 h-auto mb-4'>
+        <div className=' shadow-yellow-800 mt-10 ml-10 mr-10 shadow-md rounded-md bg-zinc-100 bg-opacity-60 h-auto mb-4'>
             <SubNavbar/>
             <div className='flex items-center justify-center  rounded-md'>
                 <div className='mr-6' >
@@ -44,7 +44,7 @@ function LoginPage(){
                             {()=>{return(
                     <div>
                    
-                        <Form className='grid grid-rows-2 text-xl w-[32vw] justify-center border-2 h-auto p-6 rounded-md text-orange-950'>
+                        <Form className='grid grid-rows-2 text-xl w-[32vw] justify-center shadow-md shadow-orange-900 h-auto p-6 rounded-md text-orange-950 bg-gradient-to-br from-yellow-600 to-orange-700'>
                             <p className='text-center text-xl font-semibold '>Welcome!</p>
                            <p className='text-center text-xl font-semibold  mb-4'> Login to your Account</p>
                             <InputField type='text' name='Username' label='Username' className='w-[26vw]'/>

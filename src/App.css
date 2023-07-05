@@ -2,17 +2,7 @@
   backdrop-filter: blur(5px);
 }
 
-.cardBG {
-  background-color: #dbdef9;
-}
 
-.top2 {
-  background-color: white;
-}
-
-.bottomButtons {
-  background-color: #b3bdf2;
-}
 
 .line {
   border: solid black 0.5px;
@@ -43,6 +33,4 @@ backdrop-filter:blur(15px);
  
 
 
-.btn{
-  background-color: #764BF0;
-}
+
