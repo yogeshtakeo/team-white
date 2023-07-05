@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #aea8fd;
+  backdrop-filter: blur(5px);
 }
 
 .cardBG {
@@ -19,20 +19,26 @@
   margin: 5px;
 }
 
-.login{
-  background-color: #535EBA;
-  height: 480px;
-}
+
 
 body{
 
-  background: linear-gradient(to right, rgb(183, 119, 1),rgba(255, 166, 0, 0.354));
+  background-image: linear-gradient( to right, rgb(183, 119, 1),rgba(255, 166, 0, 0.354));
+  
 }
 .form{
 
 backdrop-filter:blur(15px);
 
 }
+.slider{
+  width:40rem;
+  height: 26rem;
+}
+
+  
+
+
 
  
 

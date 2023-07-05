@@ -9,16 +9,16 @@ import { useNavigate } from 'react-router-dom'
 function Navbar() {
   const navigate=useNavigate()
   return (
-    <div className="navbar flex justify-between align-center h-12 w-full p-3">
-     <div className=' bg-slate-300 Brandlogo flex justify-center items-center'>
+    <div className="navbar flex justify-between align-center h-12 w-full p-3 text-orange-950 ">
+     <div className='Brandlogo flex justify-center items-center'>
     <ul className='navbar flex flex-row justify-around align-center w-full pl-4 font-semibold'>
-    <li className=' text-2xl'>
+    <li className=' text-3xl font-semibold text-white'>
         PayCircle
       </li>
       </ul>
      <BLogo/>
       </div>
-      <div className='Rnav w-[50%] bg-slate-200'>
+      <div className='Rnav w-[50%]'>
       <ul className=' navbar flex justify-around align-center  pl-4 font-semibold'>
       <li>
       <a href='#'>Small Business</a>

@@ -33,10 +33,10 @@ function LoginPage(){
         
         <Navbar/>
 
-        <div className=' shadow-gray-600 mt-10 ml-10 mr-10 shadow-xl rounded-md'>
+        <div className=' shadow-yellow-800 mt-10 ml-10 mr-10 shadow-md rounded-md bg-neutral-100 bg-opacity-60 h-auto mb-4'>
             <SubNavbar/>
-            <div className='flex rounded-md'>
-                <div className='relative login border-solid border-black p-10 h-[460px] rounded-bl-md ' >
+            <div className='flex items-center justify-center  rounded-md'>
+                <div className='mr-6' >
                     <Formik
                         initialValues={initialValues}
                         onSubmit={submitHandler}
@@ -44,16 +44,17 @@ function LoginPage(){
                             {()=>{return(
                     <div>
                    
-                        <Form className='grid grid-rows-4 text-white text-xl w-[32vw] justify-center'>
-                        
+                        <Form className='grid grid-rows-2 text-xl w-[32vw] justify-center border-2 h-auto p-6 rounded-md text-orange-950'>
+                            <p className='text-center text-xl font-semibold '>Welcome!</p>
+                           <p className='text-center text-xl font-semibold  mb-4'> Login to your Account</p>
                             <InputField type='text' name='Username' label='Username' className='w-[26vw]'/>
                             <InputField type='password' name='Password' label='Password'/>
                             
-                                <button className='border-solid border-white border-2 mt-2 h-10 hover:bg-purple-600 hover:border-transparent hover:text-black rounded'
+                                <button className='border-solid border-white border-2 mt-6 mb-2 h-10 hover:bg-yellow-600 hover:border-transparent hover:text-black rounded'
                                  type='submit'>LOGIN</button>
                             <div className=''>
-                                <p className='mt-2 mb-2'>Forgot ID/Password?</p>
-                                <p  className='mt-2 mb-2'>Security & Help</p>
+                                <p className=' mb-2 text-sm'>Forgot ID/Password?</p>
+                                <p  className='mt-2 mb-2 text-sm'>Security & Help</p>
                             </div>
                             
                         </Form>

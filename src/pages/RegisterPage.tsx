@@ -49,11 +49,11 @@ const RegisterPage = () => {
                 
         <div className='p-5'>
            
-            <img className='absolute right-[1%] top-[30%] rounded-3xl obtain-contain'  src={img} alt='image'/>
+            <img className='absolute right-[1%] top-[30%] rounded-tr-3xl obtain-contain'  src={img} alt='image'/>
           
             
-            <h1 className='text-white ml-4 mt-2 mb-4 text-3xl absolute top-[2%]'>PayCircle</h1> 
-            <div className='absolute left-[12%] top-[2%]'><BLogo/></div>
+            <h1 className=' h1 text-white ml-4 mt-2 mb-4 text-3xl absolute top-[2%] font-semibold'>PayCircle</h1> 
+            <div className='absolute left-[13%] top-[2%]'><BLogo/></div>
            
             <div className='flex'>     
     <Form className=' form absolute top-[15%] flex flex-col rounded-lg w-[45%] pl-10 pr-10 pt-4 pb-9 justify-center text-white bg-blur-xl border-2'>
