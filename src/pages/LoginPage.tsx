@@ -1,4 +1,3 @@
-import React from "react";
 import { Form, Formik, Field } from "formik";
 import { toast, Toaster } from "react-hot-toast";
 import InputField from "./InputField";
@@ -7,18 +6,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Slider from "../components/LoginPageComponent/Slider";
 import SubNavbar from "../components/LoginPageComponent/SubNavbar";
-//import { Link } from 'react-router-dom'
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const initialValues = {
     Username: "",
     Password: "",
-  };
-
-  const initialValues = {
-    Username: "",
-    password: "",
   };
 
   const validationSchema = Yup.object({
