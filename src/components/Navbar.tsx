@@ -33,7 +33,7 @@ function Navbar() {
       <a href='#'>Help</a>
       </li>
       <li>
-      <a href='#' onClick={()=>{navigate('/Search')}} ><AiOutlineSearch size={25}/>
+      <a onClick={()=>{navigate('/Search')}} ><AiOutlineSearch size={25}/>
       
       </a>
       </li>

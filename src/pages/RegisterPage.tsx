@@ -33,8 +33,11 @@ const RegisterPage = () => {
     })
     const navigate=useNavigate()
     function submithandler(values: typeof initialValues){
-        toast.success('Successfully created your account')
+       
         navigate("/LoginPage")
+        toast.success('Successfully created your account',{
+        duration:10000, })
+        
     }
  
 

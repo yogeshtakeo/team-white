@@ -23,8 +23,9 @@ function LoginPage(){
     })
     const navigate=useNavigate()
     function submitHandler(values: typeof initialValues){
-            toast.success('Successfully logged in')
+           
             navigate('/HomePage')
+            toast.success('Successfully logged in')
 
     }
    
