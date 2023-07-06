@@ -25,7 +25,10 @@ backdrop-filter:blur(15px);
   width:40rem;
   height: 26rem;
 }
-
+.borderc{
+  border-image:linear-gradient( to right,rgb(234, 199, 24), rgb(255, 98, 0));
+  border-image-slice:1;
+}
   
 
 

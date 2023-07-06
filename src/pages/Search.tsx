@@ -7,6 +7,7 @@ const Search = () => {
   return (
     <>
     <Navbar/>
+    
     <SearchBar/>
     <Footer/>
     </>
