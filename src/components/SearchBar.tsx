@@ -1,5 +1,5 @@
 import React, {useState, ChangeEvent} from 'react'
-import InputField from './InputField'
+//import InputField from './InputField'
 import Data from '../Data/Data'
 
 
@@ -8,11 +8,13 @@ import { useNavigate } from 'react-router-dom'
 interface Item{
     title:string,
     text?:string,
+    img?:string,
 }
 const SearchBar = () => {
     const [input, setInput]=useState('')
     const[filterdata, setFilterdata]=useState<Item[]>([])
     const[option, setOption]=useState(false)
+    
     const handleInput=(event:ChangeEvent<HTMLInputElement>)=>{
         setInput(event.target.value)
         const filterdata=dataLists.filter(item=> item.title.toLowerCase().includes(input.toLowerCase()))
@@ -22,7 +24,7 @@ const SearchBar = () => {
     const navigate=useNavigate()
     const handleSearch=()=>{
      
-
+//routing to search pages
       if(input.toLowerCase()==='routing number'){
         navigate('/routing')
       }
@@ -46,6 +48,8 @@ const SearchBar = () => {
     {filterdata.map((item: Item, index) => (
         <div key={index} className='flex flex-col '>
           <a>{item.title}</a>
+          <a>{item.text}</a>
+          <img src={item.img} height="100px" width="100px"/>
         
           </div>))}
           
