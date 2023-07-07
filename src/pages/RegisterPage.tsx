@@ -37,8 +37,10 @@ const RegisterPage = () => {
   });
   const navigate = useNavigate();
   function submithandler(values: typeof initialValues) {
-    toast.success("Successfully created your account");
     navigate("/LoginPage");
+    toast.success("Successfully created your account", {
+      duration: 10000,
+    });
   }
 
   return (
@@ -110,18 +112,8 @@ const RegisterPage = () => {
 
                   <p>Already have an account? Log In </p>
                   <p className="text-center mt-2">OR</p>
-
                   <button
                     className="btn  w-full  mt-4 h-9 rounded-md bg-yellow-600 shadow-lg shadow-yellow-900 hover:scale-105 flex items-center justify-center"
-                    type="submit"
-                  >
-                    <AiOutlineGoogle size={25} />
-                    Login with Google
-                  </button>
-                  <Toaster />
-
-                  <button
-                    className="btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center"
                     type="submit"
                   >
                     <AiOutlineGoogle size={25} />
