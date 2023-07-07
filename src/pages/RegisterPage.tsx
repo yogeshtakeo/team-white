@@ -33,10 +33,12 @@ const RegisterPage = () => {
     })
     const navigate=useNavigate()
     function submithandler(values: typeof initialValues){
-       
+        
         navigate("/LoginPage")
-        toast.success('Successfully created your account',{
-        duration:10000, })
+        toast.success('Successfully created your account',{duration:5000000})
+            
+            
+        
         
     }
  
@@ -98,7 +100,7 @@ const RegisterPage = () => {
                <p >Already have an account? Log In </p>
                <p className='text-center mt-2'>OR</p>
                <button className='btn  w-full  mt-4 h-9 rounded-md bg-yellow-600 shadow-lg shadow-yellow-900 hover:scale-105 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
-    <Toaster/>
+               <Toaster/>
     </Form>
     <div className='rbox absolute bottom-[-30%] right-[2%]  h-32  bg-yellow-600  rounded-md text-white p-4 flex flex-col justify-center shadow-yellow-900 shadow-lg'>
         <h1 className='text-2xl'>Say goodbye to financial stress with the help of PayCircle.</h1>
@@ -109,7 +111,9 @@ const RegisterPage = () => {
     
             )
     }}
+    
     </Formik>
+    
     </div>
     
   )
