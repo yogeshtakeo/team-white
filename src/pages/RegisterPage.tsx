@@ -3,9 +3,11 @@ import {Formik, Form, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import { toast, Toaster } from 'react-hot-toast'
 import InputField from './InputField'
-import {useState} from 'react'
+//import {useState} from 'react'
 import {AiOutlineGoogle} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
+import img from '../assets/photo-1515974256630-babc85765b1d.avif'
+import BLogo from '../components/BLogo'
 
 const RegisterPage = () => {
     const initialValues={
@@ -17,7 +19,7 @@ const RegisterPage = () => {
         confirmpassword:'',
         checkbox:false,
     }
-    const [username, setusername]=useState('')
+    
     //validates the form input fields.
     const validationSchema=Yup.object({
         firstname:Yup.string().required('*Enter First Name'),
@@ -29,9 +31,13 @@ const RegisterPage = () => {
                       
         checkbox:Yup.boolean().oneOf([true], '*You need to accept the terms and conditions')
     })
-    
+    const navigate=useNavigate()
     function submithandler(values: typeof initialValues){
-        toast.success('Successfully created your account')
+       
+        navigate("/LoginPage")
+        toast.success('Successfully created your account',{
+        duration:10000, })
+        
     }
  
 
@@ -44,12 +50,17 @@ const RegisterPage = () => {
         {()=>{
             return(
                 
-        <div className='background h-auto p-20 '>
+        <div className='p-5'>
+           
+            <img className='absolute right-[1%] top-[30%] rounded-tr-3xl obtain-contain'  src={img} alt='image'/>
+          
             
-            <h1 className='text-white ml-4 mt-2 mb-4 text-2xl'>PayCircle</h1> 
-            <div className='flex '>     
-    <Form className=' form flex flex-col h-auto rounded-lg w-[40%] p-5 justify-center text-white '>
-        <h1 className='text-center text-xl mb-2'>Create your Account</h1>
+            <h1 className=' h1 text-white ml-4 mt-2 mb-4 text-3xl absolute top-[2%] font-semibold'>PayCircle</h1> 
+            <div className='absolute left-[13%] top-[2%]'><BLogo/></div>
+           
+            <div className='flex'>     
+    <Form className=' form absolute top-[15%] flex flex-col rounded-lg w-[45%] pl-10 pr-10 pt-4 pb-9 justify-center text-white bg-blur-xl border-2'>
+        <h1 className='text-center text-2xl mb-2'>Create your Account</h1>
         <div className='grid grid-cols-2 gap-10 '>
         <InputField  type='text'
             name='firstname' label='First Name'
@@ -81,15 +92,15 @@ const RegisterPage = () => {
                  
                   </div>
                   <ErrorMessage name='checkbox' component='div' className='text-red-600'/>
-                  <Link to = "/login"> 
-                  <button className='btn  w-full mx-auto mt-4 rounded-md bg-purple-500 h-9' type="submit">Sign Up</button> 
-                  </Link>
+                 
+                  <button className='btn  w-full mx-auto mt-4 rounded-md bg-yellow-600 shadow-lg shadow-yellow-900 hover:scale-105 h-9' type="submit">Sign Up</button> 
+                  
                <p >Already have an account? Log In </p>
                <p className='text-center mt-2'>OR</p>
-               <button className='btn  w-full  mt-4 h-9 rounded-md  bg-purple-500 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
+               <button className='btn  w-full  mt-4 h-9 rounded-md bg-yellow-600 shadow-lg shadow-yellow-900 hover:scale-105 flex items-center justify-center' type="submit"><AiOutlineGoogle size={25}/>Login with Google</button> 
     <Toaster/>
     </Form>
-    <div className='rbox absolute bottom-[10%] right-20  h-32  rounded-md text-white p-4 flex flex-col justify-center'>
+    <div className='rbox absolute bottom-[-30%] right-[2%]  h-32  bg-yellow-600  rounded-md text-white p-4 flex flex-col justify-center shadow-yellow-900 shadow-lg'>
         <h1 className='text-2xl'>Say goodbye to financial stress with the help of PayCircle.</h1>
         <p>Take control of your finances with PayCircle the quickest and simplest way</p>
     </div>
