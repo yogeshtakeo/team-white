@@ -3,16 +3,17 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import {dataProvider} from './Context/dataProvider.ts'
+import DataProvider from "./Context/DataProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-<dataProvider>
+
     <BrowserRouter>
-    
+    <DataProvider>
     <App />
+    </DataProvider>
     
     </BrowserRouter>
-    </dataProvider>
+    
   </React.StrictMode>
 );
