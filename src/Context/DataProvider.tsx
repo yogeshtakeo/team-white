@@ -1,7 +1,8 @@
 import React , {useState, ReactNode, createContext} from 'react'
 import img1 from '../../src/assets/Screenshot (1006).png'
 export const dataContext=createContext<DataContextType>({
-  data:[]
+  data:[],
+  updateData:()=>{},
  
 })
 interface Item {
@@ -12,6 +13,7 @@ interface Item {
   }
   interface DataContextType {
     data: Item[],
+    updateData:(newData:Item[])=>void
     
   }
   
@@ -49,12 +51,13 @@ interface Item {
 
 const DataProvider=({children}:Ichild)=> {
     const [data, setdata]=useState<Item[]>(initialState)
-    //const updateData = (newData: Item[]) => {
-      //setdata((prevData) => [...prevData, ...newData])
-    //}
+
+    const updateData = (newData: Item[]) => {
+    setdata(newData)
+    }
 
   return (
-    <dataContext.Provider value={{data}}>
+    <dataContext.Provider value={{data, updateData}}>
       {children}
     </dataContext.Provider>
   )
